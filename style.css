@@ -4,52 +4,98 @@ html{
 
 body{
     margin: 0px;
-    background-color: #282d35;
-}
-.header-options{
-    list-style: none;
-    display: flex;
+    background-color: #1A1B21;
+    color: whitesmoke;
 }
 
 .header{
+    text-align: center;
+}
+
+.header-text > h1, h4, p{
+    margin: 0px;
+}
+
+.header-text>h1{
+    margin-bottom: 6px;
+    margin-top: 20px;
+}
+
+.header-text>h4{
+    margin-bottom: 10px;
+    font-weight: 400;
+    color: #F3BF99;
+}
+
+.header-text>p{
+    font-weight: 10;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+.profile-photo{
+    padding-top: 25px;
+    /* width: 50%; */
+}
+
+.button{
     display: flex;
+    justify-content: center;
+}
+
+.button-email{
+    display: flex;
+    background-color:white;
+    color: #374151;
     align-items: center;
-    background-color: #12222a;
-    padding: 5px 30px;
+    height: 30px;
+    width: 84px;
+    padding: 5px 15px;
+    justify-content: center;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+.button-email>img{
+    margin-right: 3px;
+}
+.button-linkedin{
+    display: flex;
+    background-color:#5093E2;
+    /* color: antiquewhite; */
+    align-items: center;
+    height: 30px;
+    width: 84px;
+    padding: 5px 15px;
+    justify-content: center;
+    border-radius: 8px;
 }
 
-.header > img{
-    width: 45px;
-    margin-right: 10px;
+.button-linkedin>img{
+    margin-right: 3px;
 }
 
-.header > h3{
-    margin-right: auto;
-    color: #61dafb;
-    font-size: 22px;
+.about-section{
+    margin: 40px 40px 30px 40px
 }
 
-.header > h4{
-    color: aliceblue;
+.about-section>h2,p{
+    margin: 10px 0px
 }
 
-.main{
-    margin: 30px;
-    color: aliceblue;
-    max-width: 550px;
-}
-.main > h1{
-    margin-top: 100px;
-    margin-bottom: 40px;
-    font-size: 60px;
+.interests-section{
+    margin: 0px 40px 35px 40px
 }
 
-.main-list > li{
-    margin-bottom: 8px;
-    font-size: 23px;
+.interests-section>h2,p{
+    margin: 10px 0px
 }
 
-.main-list > li::marker{
-    font-size: 2.1rem;
-    color: #61dafb;
+.footer{
+    background-color: #161619;
+    text-align: center;
 }
+
+.footer>img{
+    margin: 10px;
+}
+
+
