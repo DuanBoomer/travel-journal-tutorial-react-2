@@ -4,98 +4,105 @@ html{
 
 body{
     margin: 0px;
-    background-color: #1A1B21;
-    color: whitesmoke;
+}
+
+.navbar{
+    display: flex;
+    background-color: aliceblue;
+    padding: 20px 20px;
+    height: 40px;
+    box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.1);
 }
 
 .header{
+    display: flex;
+    flex-direction: column;
+    /* padding: 30px; */
     text-align: center;
+    width: auto;
+    /* background-color: cyan; */
+    margin: 30px;
 }
 
-.header-text > h1, h4, p{
+.header-images{
+    width: 300px;
+    align-self: center;
+}
+
+.header > h1, p{
+    text-align: left;
     margin: 0px;
+    color: #222222;
+    width: 300px;
 }
 
-.header-text>h1{
-    margin-bottom: 6px;
-    margin-top: 20px;
+.header > h1{
+    text-align: left;
+    color: #000000;
+    font-size: 35px;
+    margin-top: 25px;
+    margin-bottom: 15px;
 }
 
-.header-text>h4{
-    margin-bottom: 10px;
-    font-weight: 400;
-    color: #F3BF99;
-}
-
-.header-text>p{
-    font-weight: 10;
-    font-size: 13px;
-    margin-bottom: 20px;
-}
-.profile-photo{
-    padding-top: 25px;
-    /* width: 50%; */
-}
-
-.button{
+.card{
+    /* background-color: blue; */
+    margin: 20px 0px 20px 0px;
+    width: 140px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    /* flex: 0 0 0; */
+    color: #222222;
+    font-size: 12px;
+    position: relative;
+    /* margin-bottom: 30px; */
 }
 
-.button-email{
+.card-line-one{
     display: flex;
-    background-color:white;
-    color: #374151;
-    align-items: center;
-    height: 30px;
-    width: 84px;
-    padding: 5px 15px;
-    justify-content: center;
-    border-radius: 8px;
-    margin-right: 20px;
+    margin: 6px 0px;
 }
-.button-email>img{
-    margin-right: 3px;
-}
-.button-linkedin{
+
+.card-line-three{
     display: flex;
-    background-color:#5093E2;
-    /* color: antiquewhite; */
-    align-items: center;
-    height: 30px;
-    width: 84px;
-    padding: 5px 15px;
-    justify-content: center;
-    border-radius: 8px;
+    margin: 7px 0px;
 }
 
-.button-linkedin>img{
-    margin-right: 3px;
+.card-state{
+    color: #918E9B;
+    margin-top: 2px;
+    margin-left: 4px;
 }
 
-.about-section{
-    margin: 40px 40px 30px 40px
+.card-description{
+    /* overflow-wrap:; */
+    width: 140px;
+    color: #000000;
+}
+.card-price{
+    font-weight: bold;
 }
 
-.about-section>h2,p{
-    margin: 10px 0px
+.listing{
+    display: flex;
+    flex-wrap: nowrap;
+    /* background-color: cyan; */
+    gap: 20px;
+    overflow-x: auto;
+    margin: 0px 20px 0px 20px;
+    /* overflow-y: auto;  */
+
 }
 
-.interests-section{
-    margin: 0px 40px 35px 40px
-}
-
-.interests-section>h2,p{
-    margin: 10px 0px
-}
-
-.footer{
-    background-color: #161619;
-    text-align: center;
-}
-
-.footer>img{
-    margin: 10px;
+.card-badge{
+    position:absolute;
+    font-size: 11px;
+    color:#222222;
+    margin: 8px;
+    padding: 4px;
+    background-color: aliceblue;
+    border-radius: 4px;
+    top: 0px;
+    right: 0px;
 }
 
 
