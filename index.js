@@ -1,122 +1,135 @@
 
-function Navbar() {
+const data = [
+    {
+        source: "https://source.unsplash.com/Wbu_scb-9HQ",
+        name: "The Great Wall of China",
+        mapLink: "https://www.google.co.in/maps",
+        dates: "01 Oct, 2021 - 18 Nov, 2021",
+        description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non vero omnis perferendis esse at recusandae, adipisci blanditiis quibusdam commodi quam sequi ratione qui itaque voluptatibus soluta. Accusamus libero quidem provident.",
+        country: "CHINA",
+    },
+    {
+        source: "https://source.unsplash.com/OkiDIla7K8Q",
+        name: "Christ the Redeemer",
+        mapLink: "https://www.google.co.in/maps",
+        dates: "01 Oct, 2021 - 18 Nov, 2021",
+        description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non vero omnis perferendis esse at recusandae, adipisci blanditiis quibusdam commodi quam sequi ratione qui itaque voluptatibus soluta. Accusamus libero quidem provident.",
+        country: "BRAZIL",
+    },
+    {
+        source: "https://source.unsplash.com/iWMfiInivp4",
+        name: "Taj Mahal",
+        mapLink: "https://www.google.co.in/maps",
+        dates: "01 Oct, 2021 - 18 Nov, 2021",
+        description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non vero omnis perferendis esse at recusandae, adipisci blanditiis quibusdam commodi quam sequi ratione qui itaque voluptatibus soluta. Accusamus libero quidem provident.",
+        country: "INDIA",
+    },
+    {
+        source: "https://source.unsplash.com/rFESpq5MMTg",
+        name: "Machu Pichhu",
+        mapLink: "https://www.google.co.in/maps",
+        dates: "01 Oct, 2021 - 18 Nov, 2021",
+        description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non vero omnis perferendis esse at recusandae, adipisci blanditiis quibusdam commodi quam sequi ratione qui itaque voluptatibus soluta. Accusamus libero quidem provident.",
+        country: "PERU",
+    },
+    {
+        source: "https://source.unsplash.com/JELUPXqdKDw",
+        name: "Chichen Itza",
+        mapLink: "https://www.google.co.in/maps",
+        dates: "01 Oct, 2021 - 18 Nov, 2021",
+        description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non vero omnis perferendis esse at recusandae, adipisci blanditiis quibusdam commodi quam sequi ratione qui itaque voluptatibus soluta. Accusamus libero quidem provident.",
+        country: "MEXICO",
+    },
+    {
+        source: "https://source.unsplash.com/H_u3a0rQowk",
+        name: "Colosseum",
+        mapLink: "https://www.google.co.in/maps",
+        dates: "01 Oct, 2021 - 18 Nov, 2021",
+        description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non vero omnis perferendis esse at recusandae, adipisci blanditiis quibusdam commodi quam sequi ratione qui itaque voluptatibus soluta. Accusamus libero quidem provident.",
+        country: "ROME",
+    },
+    {
+        source: "https://source.unsplash.com/py8omnp-hko",
+        name: "Petra",
+        mapLink: "https://www.google.co.in/maps",
+        dates: "01 Oct, 2021 - 18 Nov, 2021",
+        description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non vero omnis perferendis esse at recusandae, adipisci blanditiis quibusdam commodi quam sequi ratione qui itaque voluptatibus soluta. Accusamus libero quidem provident.",
+        country: "JORDAN",
+    },
+    {
+        source: "https://source.unsplash.com/7UDX3BAurng",
+        name: "The Great Pyramid of Giza",
+        mapLink: "https://www.google.co.in/maps",
+        dates: "01 Oct, 2021 - 18 Nov, 2021",
+        description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non vero omnis perferendis esse at recusandae, adipisci blanditiis quibusdam commodi quam sequi ratione qui itaque voluptatibus soluta. Accusamus libero quidem provident.",
+        country: "EDYPT",
+    },
+]
+
+//
+
+
+function Navbar(){
     return (
-        <div className="navbar">
-            <img src="img/Vector.png" className="navbar-logo" />
-        </div>
+        <span className = "navbar">
+            <img src="img/Fill 213.png"/>
+            <span>my travel journal.</span>
+        </span>
     )
 }
 
-function Header() {
-    return (
-        <div className="header">
-            <img src="img/header images.png" className="header-images" />
-            <h1>Online Experiences</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, itaque nam cumque rerum incidunt deserunt doloribus neque</p>
-        </div>
-    )
-}
-
-function Card({ img, rating, reviewcount, country, title, price, spots }) {
-    let badgeText = ""
-    if (spots === 0) {
-        badgeText = "SOLD OUT"
-    }
-    else if (rating === "5.0") {
-        badgeText = "POPULAR"
-    }
-    return (
-        <div className="card">
-            {badgeText && <div className="card-badge">{badgeText}</div>}
-            <img src={`img/${img}`} />
-            <div>
-                <div className="card-line-one">
-                    <p className="card-rating">⭐ {rating}</p> <p className="card-state">({reviewcount}).{country}</p>
-                </div>
-                <p className="card-description">{title}</p>
-                <div className="card-line-three">
-                    <p className="card-price">From ${price}</p> <p className="card-per-person">/ person</p>
-                </div>
+function DestinatonInfo({source, name, maplink, dates, description, country}){
+    return(
+        < div className = "destination-info">
+            <div className = "destination-img">
+                <img src={source}/>
             </div>
+            <span className="location-description">
+                <span className="location">📌 {country}</span>
+                {/* can't pass a variable as a link to anchor tag at the moment ,hence passing a google map link directly */}
+                <a href="https://www.google.co.in/maps" className="google-map-link">View on google maps</a>
+            
+            <h1 className="location-name">{name}</h1>
+            <p className="dates">{dates}</p>
+            <p className="about-location">{description}</p>
+            
+            </span>
         </div>
     )
 }
+// 
+function Listing({data}){
+    const cards = data.map(
+        function({source, name, maplink, dates, description, country}){
+            return(
+                <DestinatonInfo 
+                    source= {source}
+                    name= {name}
+                    mapLink= {maplink}
+                    dates= {dates}
+                    description= {description}
+                    country= {country}
+                />
+            )
 
-function CreateCard({ data }) {
-    const colors = data.map(
-        function ({ image, rating, reviewcount, country, title, price, spots }) {
-            return <Card
-                img={image}
-                rating={rating}
-                reviewcount={reviewcount}
-                country={country}
-                title={title}
-                price={price}
-                spots={spots}
-            />
-        })
+        }
+    )
+
     return (
-        <div className="listing">
-            {colors}
+        <div>
+            {cards}
         </div>
     )
 }
-
-function Listing() {
-    return (
-        <CreateCard
-            data={[
-                {
-                    image: "image 12.png",
-                    rating: "4.8",
-                    reviewcount: "2",
-                    country: "USA",
-                    title: "Group mountain biking",
-                    price: "50",
-                    spots: 0,
-                },
-
-                {
-                    image: "image 12.png",
-                    rating: "5.0",
-                    reviewcount: "30",
-                    country: "USA",
-                    title: "Learn wedding photography",
-                    price: "125",
-                    spots: 1,
-                },
-                {
-                    image: "image 12.png",
-                    rating: "4.0",
-                    reviewcount: "30",
-                    country: "USA",
-                    title: "Learn wedding photography",
-                    price: "125",
-                    spots: 1,
-                },
-
-                {
-                    image: "image 12.png",
-                    rating: "2.2",
-                    reviewcount: "3",
-                    country: "USA",
-                    title: "Learn wedding photography",
-                    price: "15",
-                    spots: 0,
-                }
-            ]}
-        />
-    )
-}
-
 
 function App() {
     return (
         <div >
-            <Navbar />
-            <Header />
-            <Listing />
-
+            <Navbar/>
+            <Listing
+                data = {data}
+            />
+           
         </div>
     )
 }

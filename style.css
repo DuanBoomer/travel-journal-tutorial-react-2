@@ -7,102 +7,62 @@ body{
 }
 
 .navbar{
+    display:flex;
+    background-color: #F55A5A;
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    gap: 7px;
+}
+
+
+.destination-info{
     display: flex;
-    background-color: aliceblue;
-    padding: 20px 20px;
-    height: 40px;
-    box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.1);
+    font-size: 11px;
+    margin: 20px;
+    color: #2B283A;
 }
 
-.header{
-    display: flex;
-    flex-direction: column;
-    /* padding: 30px; */
-    text-align: center;
-    width: auto;
-    /* background-color: cyan; */
-    margin: 30px;
+.destination-img{
+    width: 125px;
+    height: 168px;
 }
 
-.header-images{
-    width: 300px;
-    align-self: center;
+.destination-img > img{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    border-radius: 6px;
 }
 
-.header > h1, p{
-    text-align: left;
-    margin: 0px;
-    color: #222222;
-    width: 300px;
+.location{
+    margin-right: 5px;
+    letter-spacing: 2px;
 }
 
-.header > h1{
-    text-align: left;
-    color: #000000;
-    font-size: 35px;
-    margin-top: 25px;
-    margin-bottom: 15px;
-}
-
-.card{
-    /* background-color: blue; */
-    margin: 20px 0px 20px 0px;
-    width: 140px;
-    display: flex;
-    flex-direction: column;
-    /* flex: 0 0 0; */
-    color: #222222;
-    font-size: 12px;
-    position: relative;
-    /* margin-bottom: 30px; */
-}
-
-.card-line-one{
-    display: flex;
-    margin: 6px 0px;
-}
-
-.card-line-three{
-    display: flex;
-    margin: 7px 0px;
-}
-
-.card-state{
+.google-map-link{
     color: #918E9B;
-    margin-top: 2px;
-    margin-left: 4px;
 }
 
-.card-description{
-    /* overflow-wrap:; */
-    width: 140px;
-    color: #000000;
+.location-description{
+    margin-left: 15px;
 }
-.card-price{
+
+
+.location-name{
+    margin: 7px 0px 16px 0px;
+}
+
+.dates{
     font-weight: bold;
 }
 
-.listing{
-    display: flex;
-    flex-wrap: nowrap;
-    /* background-color: cyan; */
-    gap: 20px;
-    overflow-x: auto;
-    margin: 0px 20px 0px 20px;
-    /* overflow-y: auto;  */
-
-}
-
-.card-badge{
-    position:absolute;
-    font-size: 11px;
-    color:#222222;
-    margin: 8px;
-    padding: 4px;
-    background-color: aliceblue;
-    border-radius: 4px;
-    top: 0px;
-    right: 0px;
+.about-location{
+    width: 220px;
+    font-weight: lighter;
 }
 
 
